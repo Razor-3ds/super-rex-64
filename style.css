@@ -1,0 +1,56 @@
+.bungee-spice-regular {
+    font-family: "Bungee Spice", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .bonheur-royale-regular {
+    font-family: "Bonheur Royale", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+ h2 {
+    font-size: 32px;
+ }
+
+ h3 {
+    font-size: 32px;
+ }
+
+ li {
+    font-size: 40px;
+    color: yellow;
+ }
+ 
+ p{
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ 
+ 
+ footer{
+    color: aliceblue;
+ }
+ body {
+    background-image: url(https://wallpaperaccess.com/full/1331638.jpg);
+    background-size: cover;
+    background-position: center;
+
+ }
+ #torch.png {
+   position: absolute
+ }
+ #torchcontainer {
+   position: relative;
+ }
+ button {
+   color: yellow;
+   background-color:darkgreen;
+   border-color: burlywood;
+   border-style: double;
+   cursor:pointer;
+
+ }
+ 
+
+  

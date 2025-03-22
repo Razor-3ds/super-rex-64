@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The King of the Dinasours</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+<h1 class="bungee-spice-regular">What is the T-rex?</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Bungee+Spice&display=swap" rel="stylesheet">
+<script>src="script.js"</script>
+<style>
+    h2{
+      font-family: "Bungee Spice", sans-serif;
+    }
+    h3{
+        font-family: "Bungee Spice", sans-serif;
+    }
+    li{
+        font-family: "Bonheur Royale", cursive;
+    }
+    </style>
+</head>
+<body>
+      <img src="t-rex-0519-removebg-preview.png" id="Rexy"  width="300" height="200" >
+       <button id="spawnbutton">Click me for a torch!!! Press,Hold,and Drag while holding to equip.</button>
+       <div id="torchcontainer" style="position: relative;width: 100%;height: 1;"></div>
+        
+       <script>
+        const button = document.getElementById("spawnbutton");
+        const container = document.getElementById("torchcontainer");
+        let torch = null; //
+        let isPressed = false;
+
+
+        button.addEventListener("click", function() {
+            torch = document.createElement("img");
+            torch.src = "torch.png";
+            torch.width = 100;
+            torch.height = 100;
+            torch.style.position = "absolute"; //
+            torch.style.left = "0px"; //
+            torch.style.top = "0px"; //
+            container.appendChild(torch);
+        });
+        document.addEventListener("mousedown", function() {
+            isPressed = true;
+         });
+        document.addEventListener("mouseup", function() {
+            isPressed = false;
+        });
+        document.addEventListener("mousemove", function(event) {
+            if (isPressed && torch) {
+                const containerRect = container.getBoundingClientRect();
+                torch.style.left = `${event.clientX - containerRect.left - torch.width / 2}px`; //
+                torch.style.top = `${event.clientY- containerRect.top - torch.height / 2}px`; //
+            }
+
+        });
+        
+
+
+       </script>
+
+    <p>
+        The Tyrannosaurus rex, often called T. rex, is one of the most iconic and fearsome dinosaurs to have ever walked the Earth. 
+        Living approximately 68 to 66 million years ago during the late Cretaceous period, it was a massive predator, measuring up to 40 feet long and standing around 12 feet tall at the hips. 
+        With powerful hind legs for swift movement and a set of serrated, bone-crushing teeth, the T. rex was built to dominate its ecosystem. 
+        Despite its terrifying reputation, recent discoveries suggest that it may have also been a scavenger, feasting on carrion when the opportunity arose. 
+        Its tiny arms, often a subject of humor, were incredibly strong and may have played a role in holding prey or aiding in other tasks. 
+        As one of the last dinosaurs to exist before the mass extinction event, the T. rex continues to capture the imagination of scientists and the public alike. 
+        Its legacy lives on, both in fossil records and popular culture.
+    </p>
+    <hr>
+        <h2> Influence in Media <img src="jurrasic.png" width="150"height="100">
+            <img src="R-removebg-preview.png" width="60" height="60">
+ </h2>
+ <p>
+    The T. rex has cemented itself as a pop culture icon, particularly through its legendary appearances in movies and TV shows. 
+    It first roared into public consciousness with films like Jurassic Park, where its towering presence and bone-chilling roar brought a mixture of awe and terror to audiences. 
+    The T. rex has become synonymous with dinosaurs in general, often portrayed as the ultimate apex predator with unmatched power. In animation and children's programming, it frequently appears as a friendly or heroic character, introducing younger generations to the prehistoric world. 
+    This dynamic range—from fearsome antagonist to endearing protagonist—has solidified its role as a versatile symbol of ancient power and modern storytelling. Its influence continues, as it often takes center stage in documentaries, blockbusters, and even merchandise, captivating audiences of all ages.</p>
+    <a href="http://www.jurassicworld.com">Official Jurrasic Park Website</a>
+    <hr>
+<h3>The Greatest Films with the Lizard</h3>
+<ul>
+        <li>The Lost World: Jurassic Park (1997)</li>
+        <li> Jurassic Park III (2001)</li>
+        <li>Jurassic World (2015)</li>
+        <li>Jurassic World: Fallen Kingdom (2018)</li> 
+        <li>The Land Before Time (1988)</li>
+        <li>Night at the Museum (2006)</li> 
+        <li>Dinosaur (2000)</li>
+        <li>King Kong (1933)</li>
+        <li>King Kong (2005)</li>
+</ul>
+<footer>
+    ©2025 Razor_3ds. All Rights Reserved.
+</footer>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
+        
+        
